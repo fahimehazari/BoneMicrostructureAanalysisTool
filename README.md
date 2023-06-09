@@ -25,9 +25,14 @@ The bone masking procedure can be called in the terminal using following input:
 python BoneMask.py <link to input folder> <threshold>
 The user gives as first input the link to the folder of the bmp files for which they want to create bone masks and then, as second input, a global threshold that needs to be performed in able to segement the bone masks.
 ## 3D Adaptive thresholding 
-The most accurate adaptive thresholding method for trabecular bone is using the mean value of the maximum and minimum intensity level in a predefined kernel. While there are many packages such as OpenCV (with their function adaptiveThreshold) and skimage (with their function threshold_adaptive) which have implemented functions for adaptive thresholding, none of them have the option to calculate the mean of the min and max intensity levels, and none of them are designed for 3D images. Therefore an own implementation was made.
+3D adaptive thresholding provides more accurate trabecular bone morphology. However, existing packages like OpenCV and skimage do not have the required functionality for calculating the mean of the min and max intensity levels or processing 3D images. Therefore, a custom implementation was developed. The process involves loading CT scan slices, pre-thresholding, creating cubes around each voxel to calculate threshold values, and handling edge cases.  
+There are two scripts here for implementing segmentation. The first script, "Separation_STB.py," follows specific steps using SimpleITK, Numpy, and OpenCV libraries. It can be executed from the terminal with inputs such as the folder link, bone type (femur, tibia, or both), radius, kernel sizes, and threshold values. The output will be stored in subfolders named "bone_STB" and "bone_wholemask" within the input folder.
+                                           python Separation_STB.py <link to input folder> <bone> <radius> <kernel sizes> <threshold>
+
+The second script, "Adaptivethresh3D.py," utilizes SimpleITK, Numpy, OpenCV, and Skimage libraries. It performs 3D adaptive thresholding and can be called from the terminal with inputs including the folder link, radius, and threshold. The output, thresholded images, will be saved in a subfolder named "3D_adaptive_thresh" within the input folder.
+                                            python Adaptivethresh3D.py <link to input folder> <radius> <threshold> 
 ## Separating subchondral bone plate from underneath subchondral trabecular bone 
-  
+  It involves 2D adaptive thresholding, separation of subchondral trabecular bone and subchondral bone plate, and the creation of periosteal and endosteal masks. Various image processing techniques such as dilation, subtraction, and morphological closing are used. The resulting masks are saved as BMP files for further analysis.
 
 
 ## Citing

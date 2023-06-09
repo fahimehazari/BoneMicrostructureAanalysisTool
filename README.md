@@ -22,12 +22,12 @@ The BoneMask script operates as follows:
 The morphological geodesic active contour function then starts from a defined region of interest (ROI) and shrinks the boundaries to fit the bone boundaries. The process is accelerated by performing morphological dilation and connectivity filtering on the thresholded and despeckled image. Finally, the morphological_geodesic_active_contour function is called with the necessary parameters to segment the bone contours.
 
 The bone masking procedure can be called in the terminal using following input:
-python BoneMask.py <link to input folder> <threshold>
+`python BoneMask.py <link to input folder> <threshold>`
 The user gives as first input the link to the folder of the bmp files for which they want to create bone masks and then, as second input, a global threshold that needs to be performed in able to segement the bone masks.
 ## 3D Adaptive thresholding 
 3D adaptive thresholding provides more accurate trabecular bone morphology. However, existing packages like OpenCV and skimage do not have the required functionality for calculating the mean of the min and max intensity levels or processing 3D images. Therefore, a custom implementation was developed. The process involves loading CT scan slices, pre-thresholding, creating cubes around each voxel to calculate threshold values, and handling edge cases.  
 There are two scripts here for implementing segmentation. The first script, "Separation_STB.py," follows specific steps using SimpleITK, Numpy, and OpenCV libraries. It can be executed from the terminal with inputs such as the folder link, bone type (femur, tibia, or both), radius, kernel sizes, and threshold values. The output will be stored in subfolders named "bone_STB" and "bone_wholemask" within the input folder.
-                                           python Separation_STB.py <link to input folder> <bone> <radius> <kernel sizes> <threshold>
+                                           `python Separation_STB.py <link to input folder> <bone> <radius> <kernel sizes> <threshold>`
 
 The second script, "Adaptivethresh3D.py," utilizes SimpleITK, Numpy, OpenCV, and Skimage libraries. It performs 3D adaptive thresholding and can be called from the terminal with inputs including the folder link, radius, and threshold. The output, thresholded images, will be saved in a subfolder named "3D_adaptive_thresh" within the input folder.
                                            `python Adaptivethresh3D.py <link to input folder> <radius> <threshold>`

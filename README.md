@@ -33,6 +33,11 @@ The second script, "Adaptivethresh3D.py," utilizes SimpleITK, Numpy, OpenCV, and
                                            
 ## Separating subchondral bone plate from underneath subchondral trabecular bone 
 It involves 2D adaptive thresholding, separation of subchondral trabecular bone and subchondral bone plate, and the creation of periosteal and endosteal masks. Various image processing techniques such as dilation, subtraction, and morphological closing are used. The resulting masks are saved as BMP files for further analysis.
+![error](./create-the-periosteal-mask.png "create-the-periosteal-mask")
+Fig 1. The visual summary of the steps used to create the periosteal mask shown on one slice of a PCCT scan of a femur. On the original grayscale image (1) the 2D adaptive thresholding is carried out with image 2 as a result. There are however still some white speckles left surrounding the bone, and the different bones still need to be separated (not visible here), so a connectivity filter is used alongside a bilateral filter to carry out these steps. The resulting image 3 then undergoes a morphological closing with kernel size (15,15,0) with a connectivity filter on the background in between to obtain the periosteal mask (image 4).
+![error](./create-the-endosteal-mask.png "create-the-endosteal-mask")
+Fig 2. The visual summary of the steps used to create the endosteal mask shown on one slice of a PCCT scan of the femoral condyle. Starting from the separated and despeckled bone (image 3), the image is dilated with a kernel size of (1,1,0) and this dilated image 5 is then subtracted from the periosteal bone mask (image 4). In parallel, the periosteal mask (image 4) is eroded with a kernel size of (3,3,0), resulting in image 7 and this eroded image is then subtracted from the periosteal mask to obtain image 8. Image 8 is then subtracted from image 6 and the resulting image 9 undergoes a last morphological closing with a connectivity
+filter inbetween on the background to obtain the endosteal mask. The subchondral trabecular bone is now separated.
   
 ## 3D Analysis   
   

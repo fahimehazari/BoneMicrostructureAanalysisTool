@@ -55,7 +55,7 @@ Tb.N is calculated using the formula (BV/TV)/Tb.Th. The open-source tool impleme
 
 * The ORMIR method from the 2022 ORMIR workshop in Maastricht can be accessed on their [GitHub page](https://github.com/SpectraCollab/ORMIR_XCT). To download and install it using Git Bash, specific commands need to be executed.
 
-* For the MIPT_OULU implementations, the code is available on their [GitHub page](https://github.com/MIPT-Oulu/SubregionalCartilageAnalysis). It can be downloaded and installed by following the provided steps.
+* For the MIPT_OULU implementations, the code is available on their [GitHub page](https://github.com/MIPT-Oulu/SubregionalCartilageAnalysis). 
 
 Note that the installation steps mentioned above are only required for the initial use of the script.
 

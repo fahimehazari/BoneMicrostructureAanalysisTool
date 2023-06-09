@@ -1,7 +1,7 @@
 # Image Analysis
 TUsing Python scripts as an open source image analysis tool which can deal with images of photon-counting CT technique and thus confirm the bone microstructure imaging.
 This tool mainly looks at three image processing steps, namely the extraction of the bone mask required for the registration, 3D Adaptive thresholding, subchondral bone plate segmentation, and 3D analysis where the
-tools main focus lies on trabecular bone parameters. 
+tools main focus lies on trabecular bone parameters. The aim of these Python implementations was to provide alternatives and comparisons to the calculations performed in CTAn, allowing for a comprehensive analysis of trabecular bone morphology.
 
 ## Required packages
 * numpy  
@@ -33,6 +33,21 @@ The second script, "Adaptivethresh3D.py," utilizes SimpleITK, Numpy, OpenCV, and
                                            
 ## Separating subchondral bone plate from underneath subchondral trabecular bone 
   It involves 2D adaptive thresholding, separation of subchondral trabecular bone and subchondral bone plate, and the creation of periosteal and endosteal masks. Various image processing techniques such as dilation, subtraction, and morphological closing are used. The resulting masks are saved as BMP files for further analysis.
+  
+## 3D Analysis   
+  
+This section provides a detailed explanation of Python-implemented methods for calculating morphometric parameters such as bone volume fraction (BV/TV), trabecular thickness (Tb.Th), trabecular separation (Tb.Sp), and trabecular number (Tb.N). The Tb.Th and Tb.Sp parameters are grouped together as they share the same calculation method, with the only difference being the use of a binary inverted image for Tb.Sp.
+
+BV/TV:
+The BV/TV calculation was implemented in Python using the PyimageJ module, which allows running BoneJ's volume fraction function in a headless environment. The implementation is based on voxel counting, comparing the number of foreground voxels (representing bone) to the total number of voxels in the image.
+
+Trabecular thickness and trabecular separation:
+Various implementations were compared with CTAn for calculating Tb.Th and Tb.Sp. These include the Local Thickness plugin from ImageJ, the ITKBoneMorphometry module, the PoreSpy library, the SPECTRA collaboration's code, and the deep learning-based segmentation method from Panfilov et al. Each method utilizes different algorithms, such as distance transformation, sphere fitting, and skeleton modeling, to calculate the thickness and separation values.
+
+Trabecular number:
+Tb.N is calculated using the formula (BV/TV)/Tb.Th. The open-source tool implements Tb.N calculation based on the computed Tb.Th values from different implementations.
+
+
 
 
 ## Citing

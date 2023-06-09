@@ -1,5 +1,5 @@
 # Image Analysis
-TUsing Python scripts as an open source image analysis tool which can deal with images of photon-counting CT technique and thus confirm the bone microstructure imaging.
+TUsing Python scripts as an open source image analysis tool which can deal with images of human knee photon-counting CT and thus confirm the bone microstructure imaging.
 This tool mainly looks at three image processing steps, namely the extraction of the bone mask required for the registration, 3D Adaptive thresholding, subchondral bone plate segmentation, and 3D analysis where the
 tools main focus lies on trabecular bone parameters. The aim of these Python implementations was to provide alternatives and comparisons to the calculations performed in CTAn, allowing for a comprehensive analysis of trabecular bone morphology.
 

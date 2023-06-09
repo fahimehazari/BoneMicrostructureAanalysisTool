@@ -82,7 +82,7 @@ Note that the installation steps mentioned above are only required for the initi
 ## Citing
 |||
 |-----------------------|-----------------|
-|**Author / Master student** | Emma Van Riet| 
+|**Author / Master Student** | Emma Van Riet| 
 |**Author / PhD Candidate** | Fahimeh Azari|
 |**P.I.**| Harry van Lenthe |
 |**Department** | Mechanical Engineering, Biomechanics Section|

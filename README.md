@@ -72,7 +72,7 @@ Tb.N is calculated using the formula (BV/TV)/Tb.Th. The open-source tool impleme
 
 * Porespy and ITKBoneMorphometry methods can be installed using pip by running `pip install porespy` and `pip install itk-bonemorphometry` in the terminal, respectively.
 
-* The ORMIR method from the 2022 ORMIR workshop in Maastricht can be accessed on their [GitHub page](https://github.com/SpectraCollab/ORMIR_XCT). To download and install it using Git Bash, specific commands need to be executed.
+* The ORMIR method can be accessed on their [GitHub page](https://github.com/SpectraCollab/ORMIR_XCT). To download and install it using Git Bash, specific commands need to be executed.
 
 * For the MIPT_OULU implementations, the code is available on their [GitHub page](https://github.com/MIPT-Oulu/SubregionalCartilageAnalysis). 
 

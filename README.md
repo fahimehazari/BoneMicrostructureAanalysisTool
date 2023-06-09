@@ -30,7 +30,7 @@ There are two scripts here for implementing segmentation. The first script, "Sep
                                            python Separation_STB.py <link to input folder> <bone> <radius> <kernel sizes> <threshold>
 
 The second script, "Adaptivethresh3D.py," utilizes SimpleITK, Numpy, OpenCV, and Skimage libraries. It performs 3D adaptive thresholding and can be called from the terminal with inputs including the folder link, radius, and threshold. The output, thresholded images, will be saved in a subfolder named "3D_adaptive_thresh" within the input folder.
-                                            python Adaptivethresh3D.py <link to input folder> <radius> <threshold> 
+                                           `python Adaptivethresh3D.py <link to input folder> <radius> <threshold>`
 ## Separating subchondral bone plate from underneath subchondral trabecular bone 
   It involves 2D adaptive thresholding, separation of subchondral trabecular bone and subchondral bone plate, and the creation of periosteal and endosteal masks. Various image processing techniques such as dilation, subtraction, and morphological closing are used. The resulting masks are saved as BMP files for further analysis.
 

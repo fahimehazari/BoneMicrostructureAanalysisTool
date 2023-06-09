@@ -5,6 +5,21 @@ tools main focus lies on trabecular bone parameters. The aim of these Python imp
 
 ## Required packages
 * numpy  
+* imagej
+* cv2 (OpenCV)
+* natsort
+* glob
+* SimpleITK
+* itk
+* porespy
+* scyjava
+* xlsxwriter
+* warnings
+* napari
+* matplotlib.pyplot
+* skimage.segmentation
+* skimage
+* gc
 
 ## Creating a bone mask
 The BoneMask script operates as follows:

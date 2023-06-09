@@ -47,15 +47,15 @@ Various implementations were compared with CTAn for calculating Tb.Th and Tb.Sp.
 Trabecular number:
 Tb.N is calculated using the formula (BV/TV)/Tb.Th. The open-source tool implements Tb.N calculation based on the computed Tb.Th values from different implementations.
 
-The script is called "3D_analysis.py,". To execute the procedure from the terminal, the user needs to provide the input folder link and the voxel size as arguments: `python 3D_analysis.py <link to input folder> <voxel_size>`. The output calculations are saved in an Excel file named "3D_analysis_PYTHON" within the input folder. The voxel size is specified in millimeters to allow compatibility with different CT modalities.
+* The script is called "3D_analysis.py,". To execute the procedure from the terminal, the user needs to provide the input folder link and the voxel size as arguments: `python 3D_analysis.py <link to input folder> <voxel_size>`. The output calculations are saved in an Excel file named "3D_analysis_PYTHON" within the input folder. The voxel size is specified in millimeters to allow compatibility with different CT modalities.
 
-To use different implementations, specific steps must be followed. Running BoneJ headlessly from Python requires downloading ImageJ or Fiji software and installing the BoneJ plugins through Fiji. The script also needs modification, specifically adjusting the `os.environ['JAVA_HOME']` line and the `ij = imagej.init()` line to match the location of the jre file of the Fiji app. PyimageJ wrapper is used to enable BoneJ usage from Python, and installation instructions can be found on the [PyimageJ GitHub page](https://github.com/imagej/pyimagej).
+* To use different implementations, specific steps must be followed. Running BoneJ headlessly from Python requires downloading ImageJ or Fiji software and installing the BoneJ plugins through Fiji. The script also needs modification, specifically adjusting the `os.environ['JAVA_HOME']` line and the `ij = imagej.init()` line to match the location of the jre file of the Fiji app. PyimageJ wrapper is used to enable BoneJ usage from Python, and installation instructions can be found on the [PyimageJ GitHub page](https://github.com/imagej/pyimagej).
 
-Porespy and ITKBoneMorphometry methods can be installed using pip by running `pip install porespy` and `pip install itk-bonemorphometry` in the terminal, respectively.
+* Porespy and ITKBoneMorphometry methods can be installed using pip by running `pip install porespy` and `pip install itk-bonemorphometry` in the terminal, respectively.
 
-The ORMIR method from the 2022 ORMIR workshop in Maastricht can be accessed on their [GitHub page](https://github.com/SpectraCollab/ORMIR_XCT). To download and install it using Git Bash, specific commands need to be executed.
+* The ORMIR method from the 2022 ORMIR workshop in Maastricht can be accessed on their [GitHub page](https://github.com/SpectraCollab/ORMIR_XCT). To download and install it using Git Bash, specific commands need to be executed.
 
-For the MIPT_OULU implementations, the code is available on their [GitHub page](https://github.com/MIPT-Oulu/SubregionalCartilageAnalysis). It can be downloaded and installed by following the provided steps.
+* For the MIPT_OULU implementations, the code is available on their [GitHub page](https://github.com/MIPT-Oulu/SubregionalCartilageAnalysis). It can be downloaded and installed by following the provided steps.
 
 Note that the installation steps mentioned above are only required for the initial use of the script.
 

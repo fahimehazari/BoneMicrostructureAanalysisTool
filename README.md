@@ -2,12 +2,8 @@
 Using Python scripts for creating bone mask, 3D Adaptive thresholding, subchondral bone plate segmentation, and 3D analysis. 
 
 ## Required packages
-* mimics  
-* trimatic
-* numpy
-* json
-* globe
-* math
+* numpy  
+
 ## Creating a bone mask
 The bone masking procedure can be called in the terminal using following input:
 python BoneMask.py <link to input folder> <threshold>
